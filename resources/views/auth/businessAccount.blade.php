@@ -18,7 +18,7 @@
         @method('post')
         @csrf
         <div class="flex justify-center items-center">
-            <div class="container flex-col  bg-white rounded-3xl my-12 pr-8">
+            <div class="container flex-col  bg-white rounded-3xl my-12 pr-8 py-6">
                 <h2 class="text-xl font-bold text-center mt-2"> بيانات حساب الشركة </h2>
                 <div class="flex items-end justify-center mt-2">
                     <div class="w-[80%] mx-auto">

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('business_account', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
             $table->string('email')->unique();
@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('registration_number');
             $table->string('phone_number');
             $table->string('password');
-            $table->timestamps();
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('business_account');
+        Schema::dropIfExists('companies');
     }
 };
