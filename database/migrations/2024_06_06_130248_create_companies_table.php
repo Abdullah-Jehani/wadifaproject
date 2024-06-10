@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('location');
             $table->string('specialization');
-            $table->date('establishment-date');
+            $table->date('establishment_date');
             $table->string('registration_number');
             $table->string('phone_number');
             $table->string('password');

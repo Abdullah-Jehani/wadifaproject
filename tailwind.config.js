@@ -13,7 +13,8 @@ export default {
         'primary' : '#1B43A9',
         'white' : '#FFFFFF',
         'background' : '#F5F9F9' , 
-        'inputfield' : '#F3F5F6'
+        'inputfield' : '#F3F5F6' , 
+        'danger' : '#dc2626'
     },
     extend: {},
   },
