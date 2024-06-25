@@ -37,9 +37,14 @@
                         <label for="field3" class="block text-gray-700 text-sm font-bold mb-2">التخصص</label>
                         <select class="bg-inputfield rounded-md px-3 py-2 w-[80%] h-[60px] font-bold" name="specialization" id="specialization" dir="rtl" style=" color: #6B7980; outline:none">
                             <option value="" disabled selected>اختر من القائمة</option>
-                            <option class="font-bold" value="option1">التخصص 1</option>
-                            <option class="font-bold" value="option2">التخصص 2</option>
-                            <option class="font-bold" value="option3">التخصص 3</option>
+                            <option class="font-bold" value="علم البيانات">علم البيانات</option>
+                            <option class="font-bold" value="تطوير البرمجيات">تطوير البرمجيات</option>
+                            <option class="font-bold" value="التسويق الرقمي">التسويق الرقمي</option>
+                            <option class="font-bold" value="الهندسة">الهندسة</option>
+                            <option class="font-bold" value="إدارة الأعمال">إدارة الأعمال</option>
+                            <option class="font-bold" value="المالية">المالية</option>
+                            <option class="font-bold" value="التصميم الجرافيكي">التصميم الجرافيكي</option>
+                            <option class="font-bold" value="التسويق">التسويق</option>
                             <!-- Add more options as needed -->
                         </select>
                         @error('specialization')
