@@ -11,17 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personal_account', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('titlename');
-            $table->string('location');
-            $table->string('email')->unique();
-            $table->string('education');
-            $table->string('specialization');
-            $table->string('jobtitle');
+            $table->foreignId('company_id')->constrained('companies')->onDelete('cascade');
+            $table->string('job_title');
             $table->string('phone_number');
-            $table->string('password');
+            $table->string('location');
+            $table->string('work_type');
+            $table->text('content');  // Ensure 'content' is consistent
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personal_account');
+        Schema::dropIfExists('posts');
     }
 };

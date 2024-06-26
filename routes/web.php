@@ -5,6 +5,7 @@ use App\Http\Controllers\businessAccountController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\personalAccountController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,4 +21,6 @@ Route::post('/business-account/register', [AuthController::class, 'companyRegist
 route::get('/login', [AuthController::class, 'index'])->name('auth.index');
 route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 
-route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
+route::get('/jobs', [PostController::class, 'index'])->name('post.index');
+route::get('/jobs/{post}', [PostController::class, 'show'])->name('post.show');
+route::get('/jobs/create', [PostController::class, 'create'])->name('post.create');

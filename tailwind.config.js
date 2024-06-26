@@ -6,17 +6,21 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    fontFamily:  {
-      'alexandria' : 'alexandria' 
-    } , 
-    colors: {
+
+    extend: {
+      colors: {
         'primary' : '#1B43A9',
         'white' : '#FFFFFF',
         'background' : '#F5F9F9' , 
         'inputfield' : '#F3F5F6' , 
-        'danger' : '#dc2626'
+        'danger' : '#dc2626',  
+        'greyish' : '#3E3E3E' , 
     },
-    extend: {},
+          fontFamily:  {
+      'alexandria' : 'alexandria' 
+    } , 
+    
+    },
   },
   plugins: [],
 }
