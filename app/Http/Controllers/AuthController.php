@@ -52,7 +52,7 @@ class AuthController extends Controller
 
         $employee->save();
 
-        return redirect('/jobs');
+        return redirect('/login');
     }
 
     public function companyRegister(Request $request)
@@ -79,7 +79,7 @@ class AuthController extends Controller
             'company_name' => $request->company_name,
         ]);
         $company->save();
-        return redirect('/jobs');
+        return redirect('/login');
     }
     public function index()
     {
@@ -114,5 +114,12 @@ class AuthController extends Controller
 
         // If login fails for either company or employee
         return redirect()->back()->withInput()->withErrors(['email' => 'البريد الالكتروني او رمز المرور غير صحيحتان', 'password' => 'البريد الالكتروني او رمز المرور غير صحيحتان']);
+    }
+
+    public function logout()
+    {
+        auth()->guard('company')->logout();
+        auth()->guard('employee')->logout();
+        return redirect('/login');
     }
 }

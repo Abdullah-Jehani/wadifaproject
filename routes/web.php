@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\businessAccountController;
 use App\Http\Controllers\JobController;
@@ -23,4 +24,9 @@ route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login')
 
 route::get('/jobs', [PostController::class, 'index'])->name('post.index');
 route::get('/jobs/{post}', [PostController::class, 'show'])->name('post.show');
-route::get('/jobs/create', [PostController::class, 'create'])->name('post.create');
+route::get('/create-jobs/create', [PostController::class, 'create'])->name('post.create');
+Route::middleware(['auth:company'])->group(function () {
+    Route::post('/create-jobs/store', [PostController::class, 'store'])->name('post.store');
+});
+route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+route::post('post/apply/{post}/{employee}', [ApplicationController::class, 'sendApplication'])->name('post.apply');

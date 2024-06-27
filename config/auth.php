@@ -44,13 +44,11 @@ return [
             'driver' => 'session',
             'provider' => 'employees',
         ],
-
         'company' => [
             'driver' => 'session',
             'provider' => 'companies',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | User Providers

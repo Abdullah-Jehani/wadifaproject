@@ -22,4 +22,9 @@ class Post extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function Application()
+    {
+        return $this->hasMany(Application::class);
+    }
 }
